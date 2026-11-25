@@ -44,15 +44,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               className="pointer-events-none absolute inset-x-0 -z-10 top-0 bottom-0 mx-auto hidden max-w-max px-(margin-mobile) sm:block sm:px-(--margin-tablet) lg:px-(--margin-desktop)"
             >
               <div
-                className="grid h-full grid-cols-12 gap-x-6"
+                className="grid h-full grid-cols-12 lg:gap-x-6"
               >
                 {
                   Array.from({ length: 12 }, (_, i) => (
-                      <div 
-                        key={i}
-                        className="border-l border-lmMedium dark:border-dmMedium opacity-30" 
-                      />
-                    )
+                    <div
+                      key={i}
+                      className="border-l border-lmMedium dark:border-dmMedium opacity-30 transition-border duration-(--duration-dim) ease-out"
+                    />
+                  )
                   )
                 }
               </div>

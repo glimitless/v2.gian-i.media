@@ -410,6 +410,7 @@
 @layer base {
   html {
     color-scheme: light dark;
+    scrollbar-width: thin;
   }
   body {
     @apply bg-lmBg text-lmPrimary dark:bg-dmBg dark:text-dmPrimary font-text;

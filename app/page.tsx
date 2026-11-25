@@ -60,9 +60,11 @@ export default function HomePage() {
   return (
     <div className="flex flex-col pt-14 lg:pt-16">
       {/* Portrait intro */}
-      <section aria-labelledby="intro" className="grid gap-10 lg:grid-cols-12 lg:gap-x-6">
+      {/* 1024+: label in row 1, aside in row 2 directly under it, the h1 block spanning both rows.
+          Row 2 is 1fr so the spanning h1 block's height goes only to row 2 and row 1 stays the label's height. */}
+      <section aria-labelledby="intro" className="grid gap-10 lg:grid-cols-12 lg:grid-rows-[auto_1fr] lg:gap-x-6 lg:gap-y-8">
         <p className="a-label text-lmAccentInk lg:col-span-3 dark:text-dmAccentInk">FIG. 00 — INTRO</p>
-        <div className="flex flex-col gap-8 lg:col-span-9 lg:col-start-4">
+        <div className="flex flex-col gap-8 lg:col-span-9 lg:col-start-4 lg:row-span-2 lg:row-start-1">
           <h1 id="intro" className={DISPLAY_HEADING}>
             I design the brand and the interface, and increasingly the <span className="text-lmAccentInk dark:text-dmAccentInk">code</span> behind&nbsp;them.
           </h1>
@@ -71,7 +73,7 @@ export default function HomePage() {
           </p>
         </div>
         {/* <640 stacked · 640–1023 labels and portrait side by side · 1024+ the 3-column aside under the label */}
-        <aside className="grid gap-6 sm:grid-cols-2 sm:items-end lg:col-span-3 lg:row-start-2 lg:-mt-2 lg:grid-cols-1 lg:items-start">
+        <aside className="grid gap-6 sm:grid-cols-2 sm:items-end lg:col-span-3 lg:col-start-1 lg:row-start-2 lg:-mt-2 lg:grid-cols-1 lg:items-start lg:self-start">
           <ul className="a-label flex flex-col text-lmSecondary dark:text-dmSecondary">
             <li className="border-t border-lmMedium py-2.5 dark:border-dmMedium">Designer &amp; aspiring<br />software engineer</li>
             <li className="border-t border-lmMedium py-2.5 dark:border-dmMedium">Toronto, Canada</li>

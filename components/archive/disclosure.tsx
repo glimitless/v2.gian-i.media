@@ -58,7 +58,7 @@ export default function Disclosure(props: DisclosureProps) {
               <span className={`${META} max-sm:col-start-1 max-sm:row-start-1`}>{props.lead}</span>
               <span className={`${TITLE} max-sm:col-start-1 max-sm:row-start-2`}>{title}</span>
               {meta && <span className={`${META} max-sm:col-start-1 max-sm:row-start-3`}>{meta}</span>}
-              <span aria-hidden="true" className={`${square} max-sm:col-start-2 max-sm:row-span-3 max-sm:row-start-1 max-sm:self-start`}>
+              <span aria-hidden="true" className={`${square} max-sm:col-start-2 max-sm:row-span-3 max-sm:row-start-1 max-sm:self-start pb-[0.1rem]`}>
                 {open ? '−' : '+'}
               </span>
             </>

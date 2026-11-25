@@ -50,7 +50,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                   Array.from({ length: 12 }, (_, i) => (
                     <div
                       key={i}
-                      className="border-l border-lmMedium dark:border-dmMedium opacity-30 transition-border duration-(--duration-dim) ease-out"
+                      className="border-l border-lmMedium dark:border-dmMedium opacity-30 transition-border duration-(--duration-dim) ease-out last:border-r"
                     />
                   )
                   )

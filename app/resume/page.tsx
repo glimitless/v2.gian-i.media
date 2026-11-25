@@ -48,7 +48,6 @@ function ResumeEntries({ section }: { section: ResumeSection }) {
         <Disclosure
           key={`${entry.name}-${i}`}
           variant="entry"
-          defaultOpen={i === 0}
           lead={shortenMonths(entry.date)}
           title={
             <>

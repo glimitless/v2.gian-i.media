@@ -5,7 +5,6 @@ import { useId, useState, type ReactNode } from 'react';
 type DisclosureProps = {
   title: ReactNode;
   meta?: ReactNode;
-  defaultOpen?: boolean;
   children: ReactNode;
   headingLevel?: 2 | 3 | 4;
 } & (
@@ -27,8 +26,8 @@ const META = 'a-label text-lmFadedText dark:text-dmFadedText';
  * "row" (notes): ⌄/⌃ square · title · date. "entry" (resume): date · title · location · ±.
  */
 export default function Disclosure(props: DisclosureProps) {
-  const { title, meta, defaultOpen = false, children, headingLevel = 3 } = props;
-  const [open, setOpen] = useState(defaultOpen);
+  const { title, meta, children, headingLevel = 3 } = props;
+  const [open, setOpen] = useState(false);
   const panelId = useId();
   const Heading = `h${headingLevel}` as 'h2' | 'h3' | 'h4';
   const square = `${SQUARE_BASE} ${open ? SQUARE_OPEN : SQUARE_CLOSED}`;
@@ -76,7 +75,7 @@ export default function Disclosure(props: DisclosureProps) {
       </Heading>
       <div id={panelId} className={`grid transition-[grid-template-rows] duration-(--duration-settle) ease-out ${open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
         <div className="min-h-0 overflow-hidden">
-          <div className={isEntry ? 'px-3 pb-5 sm:pl-[208px]' : 'pr-3 pb-5 pl-[50px]'}>{children}</div>
+          <div className={isEntry ? 'px-3 pb-5 sm:pl-52' : 'pr-3 pb-5 pl-12.5'}>{children}</div>
         </div>
       </div>
     </div>

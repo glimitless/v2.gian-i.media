@@ -1,4 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
+import './globals.css';
+import ThemeProvider from '@/components/theme/theme-provider';
+import SiteHeader from '@/components/site/site-header';
+import SiteFooter from '@/components/site/site-footer';
 
 export const metadata: Metadata = {
   title: {
@@ -10,11 +14,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className='h-full antialiased'
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
+      <body className="flex min-h-full flex-col">
+        <ThemeProvider>
+          <div className="mx-auto flex w-full max-w-(--container-max) flex-1 flex-col px-(--margin-mobile) sm:px-(--margin-tablet) lg:px-(--margin-desktop)">
+            <SiteHeader />
+            <main id="main" className="flex-1">
+              {children}
+            </main>
+            <SiteFooter />
+          </div>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

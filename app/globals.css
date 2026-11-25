@@ -1,3 +1,6 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* ibm-plex-mono-100 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -158,4 +161,267 @@
   font-stretch: 62% 125%;
   src: url('../fonts/archivo-italic-variable.woff2') format('woff2-variations'),
        url('../fonts/archivo-italic-variable.ttf') format('truetype');
+}
+
+/* ---- Design tokens: spec.md §Tailwind v4 mapping (@theme) ---- */
+@theme {
+  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-text: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+
+  --color-lmBg: #F1F1F4;  --color-dmBg: #121214;
+  --color-lmBgActive: #E6E6E9;  --color-dmBgActive: #1B1B1E;
+  --color-lmSurface: #DFDFE3;  --color-dmSurface: #222225;
+  --color-lmMedium: #ADACB2;  --color-dmMedium: #46454A;
+  --color-lmSecondary: #515157;  --color-dmSecondary: #B5B4BB;
+  --color-lmFadedText: #616168;  --color-dmFadedText: #95949B;
+  --color-lmPrimary: #131316;  --color-dmPrimary: #F1F1F4;
+  --color-lmAccent: #7A38BF;  --color-dmAccent: #B68CF2;
+  --color-lmAccentInk: #7A38BF;  --color-dmAccentInk: #B68CF2;
+  --color-lmOnAccent: #FFFFFF;  --color-dmOnAccent: #121214;
+  --color-lmDiscBrand: #7A38BF;  --color-dmDiscBrand: #B68CF2;
+  --color-lmDiscProduct: #131316;  --color-dmDiscProduct: #F1F1F4;
+  --color-lmDiscInteractive: #515157;  --color-dmDiscInteractive: #B5B4BB;
+
+  --text-display: 6rem; --text-display--line-height: 5.5rem; --text-display--font-weight: 800; --text-display--letter-spacing: -0.04em;  /* a-display: font-stretch 112% → add font-stretch-112% */
+  --text-displayTablet: 4.5rem; --text-displayTablet--line-height: 4.25rem; --text-displayTablet--font-weight: 800; --text-displayTablet--letter-spacing: -0.04em;  /* a-display-t: font-stretch 110% → add font-stretch-110% */
+  --text-displayMobile: 3rem; --text-displayMobile--line-height: 3rem; --text-displayMobile--font-weight: 800; --text-displayMobile--letter-spacing: -0.035em;  /* a-display-m: font-stretch 108% → add font-stretch-108% */
+  --text-displayXs: 2.625rem; --text-displayXs--line-height: 2.625rem; --text-displayXs--font-weight: 800; --text-displayXs--letter-spacing: -0.035em;  /* a-display-xs: font-stretch 108% → add font-stretch-108% */
+  --text-title: 2.75rem; --text-title--line-height: 3rem; --text-title--font-weight: 700; --text-title--letter-spacing: -0.025em;  /* a-title: font-stretch 105% → add font-stretch-105% */
+  --text-subtitle: 1.5rem; --text-subtitle--line-height: 2rem; --text-subtitle--font-weight: 500; --text-subtitle--letter-spacing: -0.01em;
+  --text-body: 1.125rem; --text-body--line-height: 1.75rem; --text-body--font-weight: 400; --text-body--letter-spacing: 0;
+  --text-small: 0.9375rem; --text-small--line-height: 1.375rem; --text-small--font-weight: 400; --text-small--letter-spacing: 0;
+  --text-label: 0.75rem; --text-label--line-height: 1rem; --text-label--font-weight: 500; --text-label--letter-spacing: 0.06em;
+  --text-button: 0.9375rem; --text-button--line-height: 1.25rem; --text-button--font-weight: 600; --text-button--letter-spacing: 0.005em;  /* a-button: font-stretch 105% → add font-stretch-105% */
+
+  --breakpoint-*: initial;  /* replace Tailwind's default screens with the four switches (+ the 360 type switch) */
+  --breakpoint-xs: 22.5rem;  /* 360px */
+  --breakpoint-sm: 40rem;  /* 640px */
+  --breakpoint-lg: 64rem;  /* 1024px */
+  --breakpoint-xl: 80rem;  /* 1280px */
+  --breakpoint-2xl: 90rem;  /* 1440px */
+
+  --container-max: 1440px;  /* page max width incl. margins: use max-w-(--container-max) */
+  --margin-mobile: 16px;  /* custom: use px-(--margin-mobile) */
+  --margin-tablet: 32px;  /* custom: use px-(--margin-tablet) */
+  --margin-desktop: 48px;  /* custom: use px-(--margin-desktop) */
+
+  --space-1: 4px;  /* custom: use p-(--space-1), gap-(--space-1) */
+  --space-2: 8px;  /* custom: use p-(--space-2), gap-(--space-2) */
+  --space-3: 12px;  /* custom: use p-(--space-3), gap-(--space-3) */
+  --space-4: 16px;  /* custom: use p-(--space-4), gap-(--space-4) */
+  --space-6: 24px;  /* custom: use p-(--space-6), gap-(--space-6) */
+  --space-8: 32px;  /* custom: use p-(--space-8), gap-(--space-8) */
+  --space-12: 48px;  /* custom: use p-(--space-12), gap-(--space-12) */
+  --space-16: 64px;  /* custom: use p-(--space-16), gap-(--space-16) */
+  --space-24: 96px;  /* custom: use p-(--space-24), gap-(--space-24) */
+
+  --radius-none: 0px;
+  --shadow-lmRest: none;
+  --shadow-lmRaised: 4px 4px 0 0 #7A38BF;
+  --shadow-dmRest: none;
+  --shadow-dmRaised: 4px 4px 0 0 #B68CF2;
+
+  --ease-snap: cubic-bezier(0.2, 0, 0, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-press: 90ms;  /* custom: use duration-(--duration-press) */
+  --duration-hover: 160ms;  /* custom: use duration-(--duration-hover) */
+  --duration-settle: 280ms;  /* custom: use duration-(--duration-settle) */
+  --duration-dim: 480ms;  /* custom: use duration-(--duration-dim) */
+  --duration-stagger: 30ms;  /* custom: use duration-(--duration-stagger) */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --duration-press: 0ms; --duration-hover: 0ms; --duration-settle: 0ms; --duration-dim: 0ms; --duration-stagger: 0ms; }
+}
+
+
+/* ---- tokens.css: CSS custom properties and .a-* type classes (light :root, dark .dark) ---- */
+/* gian-i.media — Design Direction A (Purple) — generated from tokens.json.
+   Archivo must be the variable font (wdth axis): the type classes set font-stretch.
+   Load: https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap */
+:root {
+  --bg: #f1f1f4; /* Page background. */
+  --bgActive: #e6e6e9; /* Hovered / pressed row and chip background on bg. */
+  --surface: #dfdfe3; /* Cards, panels, nav, inputs: the second plane. */
+  --medium: #adacb2; /* Dividers, hairline rules, decorative borders (not a text colour; not for control edges). */
+  --secondary: #515157; /* Secondary text on bg and surface: intros, descriptions. */
+  --fadedText: #616168; /* Tertiary text on bg and surface: dates, counts, placeholders. Also the 3:1 border for controls. */
+  --primary: #131316; /* Main text and headings on bg and surface; primary button fill. */
+  --accent: #7a38bf; /* The deliberate accent: fills, marks, highlights. Purple, also AA as text. */
+  --accentInk: #7a38bf; /* Accent used as text or link colour on bg and surface (AA). */
+  --onAccent: #ffffff; /* Text on an accent fill. */
+  --discBrand: #7a38bf; /* Discipline: Brand & Graphic Design. Disciplines are numbered (01–03), not colour-coded; these tokens are only for the rare mark that needs one. */
+  --discProduct: #131316; /* Discipline: Product & UI Design & Development. Numbered, not colour-coded (see discBrand). */
+  --discInteractive: #515157; /* Discipline: Interactive Media. Numbered, not colour-coded (see discBrand). */
+  --shadow: none; /* Resting elevation: none. Hierarchy comes from rules and the paper/surface step. */
+  --shadowRaised: 4px 4px 0 0 #7A38BF; /* Hover on cards and the secondary button: a hard 4px accent offset that collapses on press. */
+}
+.dark {
+  --bg: #121214;
+  --bgActive: #1b1b1e;
+  --surface: #222225;
+  --medium: #46454a;
+  --secondary: #b5b4bb;
+  --fadedText: #95949b;
+  --primary: #f1f1f4;
+  --accent: #b68cf2;
+  --accentInk: #b68cf2;
+  --onAccent: #121214;
+  --discBrand: #b68cf2;
+  --discProduct: #f1f1f4;
+  --discInteractive: #b5b4bb;
+  --shadow: none;
+  --shadowRaised: 4px 4px 0 0 #B68CF2;
+}
+:root {
+  --container-max: 1440px; /* Maximum page width, including the side margins (48px each from 1024, so content is at most 1344px). Above it the page, its rules and the 12-column grid are centred; columns stay 90px, collection media stays 660px, captions stay max-width 56ch. */
+  --margin-mobile: 16px; /* Page side margin below 640px (1 column). */
+  --margin-tablet: 32px; /* Page side margin 640–1023px (12 columns, 24px gutter). */
+  --margin-desktop: 48px; /* Page side margin from 1024px (12 columns, 24px gutter). */
+  --bp-xs: 360px; /* Type-only switch: a-display-xs below, a-display-m from here. */
+  --bp-sm: 640px; /* Tablet band: 32px margins, 12 columns, a-display-t. */
+  --bp-lg: 1024px; /* The 1440 layout returns: 48px margins, a-display. */
+  --bp-xl: 1280px; /* Wide band: 1280 archive-row widths, 3-column collection. */
+  --bp-2xl: 1440px; /* Container cap (container-max): the page centres above this. */
+  --space-1: 4px; /* Icon-to-label gaps. */
+  --space-2: 8px; /* Chip gaps, tight stacks. */
+  --space-3: 12px; /* Row padding. */
+  --space-4: 16px; /* Card padding, control padding. */
+  --space-6: 24px; /* Grid gutter. */
+  --space-8: 32px; /* Stack spacing between blocks. */
+  --space-12: 48px; /* Page side margin, desktop (48px). */
+  --space-16: 64px; /* Section spacing. */
+  --space-24: 96px; /* Hero top spacing. */
+  --a-radius: 0px; /* Everything: buttons, chips, cards, images, inputs. No exceptions. */
+  --a-dur-press: 90ms; /* Press: element translates 2px,2px and the offset shadow collapses to 0. Replaces the old 0.96 scale. Easing: a-ease-snap. */
+  --a-dur-hover: 160ms; /* Colour, background and underline changes on links, buttons, chips and archive rows. Easing: a-ease-snap. */
+  --a-dur-settle: 280ms; /* Archive filter results re-flowing; nav underline sliding between items. Easing: a-ease-out. */
+  --a-dur-dim: 480ms; /* Thumbnail dim and un-dim on row hover; theme cross-fade. Easing: a-ease-out. */
+  --a-stagger: 30ms; /* Offset between labels, and between accent marks, in a page-load or scroll-in reveal. Label starts are capped at 150ms, so a long run compresses below 30ms. Easing follows the element: steps(n) for typing, a-ease-snap for marks. */
+  --a-ease-snap: cubic-bezier(0.2, 0, 0, 1); /* Easing. */
+  --a-ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* Easing. */
+  --font-archivo: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-ibmplexmono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --text-a-display: 800 96px/88px var(--font-archivo); /* Desktop display (1024px and up). font-stretch 112%. Home hero line, archive page titles. */
+  --text-a-display-t: 800 72px/68px var(--font-archivo); /* Tablet display (640–1023px). font-stretch 110%. */
+  --text-a-display-m: 800 48px/48px var(--font-archivo); /* Mobile display (360–639px). font-stretch 108%. */
+  --text-a-display-xs: 800 42px/42px var(--font-archivo); /* Narrow mobile display (below 360px). font-stretch 108%. */
+  --text-a-title: 700 44px/48px var(--font-archivo); /* Project titles, section heads. font-stretch 105%. */
+  --text-a-subtitle: 500 24px/32px var(--font-archivo); /* Project intros, discipline names. */
+  --text-a-body: 400 18px/28px var(--font-archivo); /* Running text, case-study copy. */
+  --text-a-small: 400 15px/22px var(--font-archivo); /* Captions, card descriptions, footer. */
+  --text-a-label: 500 12px/16px var(--font-ibmplexmono); /* UPPERCASE. Metadata, dates, tags, figure numbers, filter chips. */
+  --text-a-button: 600 15px/20px var(--font-archivo); /* Buttons. font-stretch 105%. */
+}
+/* Breakpoint custom properties are reference values: CSS can't read var() inside @media, so write the px values (or use the Tailwind screens). */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --a-dur-press: 0ms;
+    --a-dur-hover: 0ms;
+    --a-dur-settle: 0ms;
+    --a-dur-dim: 0ms;
+    --a-stagger: 0ms;
+  }
+}
+.a-display {
+  font-family: var(--font-archivo);
+  font-size: 96px;
+  line-height: 88px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  font-stretch: 112%;
+}
+.a-display-t {
+  font-family: var(--font-archivo);
+  font-size: 72px;
+  line-height: 68px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  font-stretch: 110%;
+}
+.a-display-m {
+  font-family: var(--font-archivo);
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  font-stretch: 108%;
+}
+.a-display-xs {
+  font-family: var(--font-archivo);
+  font-size: 42px;
+  line-height: 42px;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  font-stretch: 108%;
+}
+.a-title {
+  font-family: var(--font-archivo);
+  font-size: 44px;
+  line-height: 48px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  font-stretch: 105%;
+}
+.a-subtitle {
+  font-family: var(--font-archivo);
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-stretch: 100%;
+}
+.a-body {
+  font-family: var(--font-archivo);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-stretch: 100%;
+}
+.a-small {
+  font-family: var(--font-archivo);
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-stretch: 100%;
+}
+.a-label {
+  font-family: var(--font-ibmplexmono);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.a-button {
+  font-family: var(--font-archivo);
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  font-stretch: 105%;
+}
+
+
+/* ---- Base ---- */
+@layer base {
+  html {
+    color-scheme: light dark;
+  }
+  body {
+    @apply bg-lmBg text-lmPrimary dark:bg-dmBg dark:text-dmPrimary font-text;
+    transition: background-color var(--duration-dim) var(--ease-out), color var(--duration-dim) var(--ease-out);
+  }
+  ::selection {
+    @apply bg-lmAccent text-lmOnAccent dark:bg-dmAccent dark:text-dmOnAccent;
+  }
+}
+
+/* Focus ring: solid 2px primary, offset 2px (README §Fixed rules). */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }

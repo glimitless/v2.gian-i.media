@@ -68,7 +68,7 @@ export default function HomePage() {
           <h1 id="intro" className={DISPLAY_HEADING}>
             I design the brand and the interface, and increasingly the <span className="text-lmAccentInk dark:text-dmAccentInk">code</span> behind&nbsp;them.
           </h1>
-          <p className="font-text text-subtitle font-medium text-lmSecondary max-w-[40rem] dark:text-dmSecondary">
+          <p className="font-text text-subtitle font-medium text-lmSecondary max-w-160 dark:text-dmSecondary">
             I’m a graphic designer transitioning into product design engineering, trained at OCAD University and drawn to work at the frontier of science and technology.
           </p>
         </div>
@@ -164,7 +164,7 @@ export default function HomePage() {
           <h2 id="archive-promo" className={TITLE_HEADING}>
             The archive
           </h2>
-          <p className="text-body text-lmSecondary max-w-[40rem] dark:text-dmSecondary">
+          <p className="text-body text-lmSecondary max-w-160 dark:text-dmSecondary">
             {plural(WORK_COUNT, 'work')} and {plural(NOTE_COUNT, 'note')} in one place: client projects, personal experiments and the thinking behind them. Filter by medium, tool or keyword.
           </p>
           <Link href="/archive" className={`${BUTTON_PRIMARY} w-fit`}>

@@ -26,7 +26,7 @@ export default function WorkCollectionsGrid({ collections, workId }: { collectio
                   <span>{fig}</span>
                   {large && <span>{collection.medium}</span>}
                 </span>
-                <span className="font-text text-[1.25rem] leading-[1.625rem] font-semibold font-stretch-105% text-lmPrimary group-hover:text-lmAccentInk dark:text-dmPrimary dark:group-hover:text-dmAccentInk">
+                <span className="font-text text-[1.25rem] leading-6.5 font-semibold font-stretch-105% text-lmPrimary group-hover:text-lmAccentInk dark:text-dmPrimary dark:group-hover:text-dmAccentInk">
                   {collection.title}
                 </span>
                 {!large && <span className={LABEL_FADED}>{collection.medium}</span>}

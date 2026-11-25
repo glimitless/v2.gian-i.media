@@ -40,7 +40,7 @@ const FEATURED = [
   {
     id: 'axxs-digital',
     kicker: '03 — Product & UI · Brand',
-    image: 'axxs-digital/the-gazette/gc_ad-the-gazette-thumbnail.webp',
+    image: 'axxs-digital/the-gazette/gc_ad-the-gazette-lingo-thumbnail.webp',
   },
   {
     id: 'design-photography',

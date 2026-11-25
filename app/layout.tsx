@@ -17,7 +17,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <body className="flex min-h-full flex-col">
         <ThemeProvider>
-          <div className="mx-auto flex w-full max-w-(--container-max) flex-1 flex-col px-(--margin-mobile) sm:px-(--margin-tablet) lg:px-(--margin-desktop)">
+          <div className="mx-auto flex w-full max-w-max flex-1 flex-col px-(--margin-mobile) sm:px-(--margin-tablet) lg:px-(--margin-desktop)">
             <SiteHeader />
             <main id="main" className="flex-1">
               {children}

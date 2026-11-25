@@ -1,12 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   experimental: {
-    agentFeedback: true,
+    agentFeedback: false,
   },
-  // Off so the archive routes can keep `dynamicParams = false` (Next 16 rejects it under
-  // Cache Components). partialPrefetching requires cacheComponents, so it is removed too.
   cacheComponents: false,
   images: {
     unoptimized: true,

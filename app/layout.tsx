@@ -12,6 +12,8 @@ export const metadata: Metadata = {
     template: '%s | Gian-I Media'
   },
   description: 'Gian-I Media is a multidisciplinary creative studio specializing in graphic design, branding, digital experiences, and interactive media.',
+  // './' resolves to each page's own path,
+  // every very page is canonical to itself unless it overrides this.
   alternates: { canonical: './' }
 };
 

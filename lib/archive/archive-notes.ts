@@ -56,5 +56,10 @@ export function findArchiveNoteMetadata(
   if (!sectionId) return toPageMetadata(note);
   const section = note?.sections.find((item) => item.id === sectionId);
   if (!blockId) return toPageMetadata(section);
-  return toPageMetadata(section?.blocks.find((item) => item.id === blockId));
+  return {
+    ...toPageMetadata(section?.blocks.find((item) => item.id === blockId)),
+    alternates: {
+      canonical: `/archive/notes/${noteId}/${sectionId}`
+    }
+  };
 }

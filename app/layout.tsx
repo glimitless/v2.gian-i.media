@@ -3,14 +3,16 @@ import './globals.css';
 import ThemeProvider from '@/components/theme/theme-provider';
 import SiteHeader from '@/components/site/site-header';
 import SiteFooter from '@/components/site/site-footer';
-// import { SITE_URL } from '@/lib/site-url/site-url';
+import { SITE_URL } from '@/lib/site-url/site-url';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'Gian-I Media',
     template: '%s | Gian-I Media'
   },
   description: 'Gian-I Media is a multidisciplinary creative studio specializing in graphic design, branding, digital experiences, and interactive media.',
+  alternates: { canonical: './' }
 };
 
 // Sets the color scheme prior to painting HTML

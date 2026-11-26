@@ -6,7 +6,7 @@ export const CONTACT_LINKS = [
 
 export default function SiteFooter() {
   return (
-    <footer className="mt-(--space-24) border-t border-lmMedium pt-6 pb-10 dark:border-dmMedium">
+    <footer className="mt-24 border-t border-lmMedium pt-6 pb-10 dark:border-dmMedium">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-baseline sm:justify-between">
         <span className="a-label text-lmFadedText dark:text-dmFadedText">Gian-I Cambridge — Toronto, ON</span>
         <ul className="flex flex-wrap gap-x-8 gap-y-2">

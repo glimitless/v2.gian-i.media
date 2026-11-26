@@ -1,8 +1,7 @@
 import type { MetadataRoute } from 'next';
 import archiveWorkIDsJson from '@/data/works/archive-work-ids.json';
 import archiveNoteIDsJson from '@/data/notes/archive-note-ids.json';
-
-const SITE_URL = 'https://v2.gian-i.media';
+import { SITE_URL } from '@/lib/site-url/site-url';
 
 /* 
   Mirrors the generateStaticParams of routes.

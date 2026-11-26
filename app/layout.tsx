@@ -3,6 +3,7 @@ import './globals.css';
 import ThemeProvider from '@/components/theme/theme-provider';
 import SiteHeader from '@/components/site/site-header';
 import SiteFooter from '@/components/site/site-footer';
+// import { SITE_URL } from '@/lib/site-url/site-url';
 
 export const metadata: Metadata = {
   title: {

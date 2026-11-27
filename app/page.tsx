@@ -209,7 +209,6 @@ export default function HomePage() {
                 >
                   <Thumbnail focusable="false" className="size-[84%] text-lmSecondary group-hover:text-lmAccentInk dark:text-dmSecondary transition-colors duration-(--duration-hover)" />
                 </Link>
-                
               </li>
             );
           })}

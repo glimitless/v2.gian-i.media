@@ -28,7 +28,7 @@ const SKILLS = [
     label: 'Intermediate in',
     items: [
       { name: 'Programming & Scripting', detail: 'Python' },
-      { name: 'AI-Assisted Development', detail: 'Claude Code' },
+      { name: 'AI-Assisted Development', detail: 'Claude Design, Claude Code' },
       { name: '2D and 3D Drafting', detail: 'AutoCAD, Rhino 8' },
       { name: '3D Animation', detail: 'Blender' },
       { name: 'Creative Coding', detail: 'Cycling ’74 Max 9, Processing' },

@@ -201,15 +201,12 @@
   --breakpoint-xl: 80rem;  /* 1280px */
   --breakpoint-2xl: 90rem;  /* 1440px */
 
-  --container-max: 1440px;  /* page max width incl. margins: use max-w-(--container-max) */
-  --margin-mobile: 16px;  /* custom: use px-(--margin-mobile) */
-  --margin-tablet: 32px;  /* custom: use px-(--margin-tablet) */
-  --margin-desktop: 48px;  /* custom: use px-(--margin-desktop) */
+  --container-max: 90rem;  /* page max width incl. margins: use max-w-max */
+  --margin-mobile: 1rem;  /* custom: use px-(--margin-mobile) */
+  --margin-tablet: 2rem;  /* custom: use px-(--margin-tablet) */
+  --margin-desktop: 3rem;  /* custom: use px-(--margin-desktop) */
 
-  --radius-none: 0px;
-  --shadow-lmRest: none;
   --shadow-lmRaised: 4px 4px 0 0 #7A38BF;
-  --shadow-dmRest: none;
   --shadow-dmRaised: 4px 4px 0 0 #B68CF2;
 
   --ease-snap: cubic-bezier(0.2, 0, 0, 1);
@@ -244,8 +241,6 @@
   --discBrand: #7a38bf; /* Discipline: Brand & Graphic Design. Disciplines are numbered (01–03), not colour-coded; these tokens are only for the rare mark that needs one. */
   --discProduct: #131316; /* Discipline: Product & UI Design & Development. Numbered, not colour-coded (see discBrand). */
   --discInteractive: #515157; /* Discipline: Interactive Media. Numbered, not colour-coded (see discBrand). */
-  --shadow: none; /* Resting elevation: none. Hierarchy comes from rules and the paper/surface step. */
-  --shadowRaised: 4px 4px 0 0 #7A38BF; /* Hover on cards and the secondary button: a hard 4px accent offset that collapses on press. */
 }
 .dark {
   --bg: #121214;
@@ -261,85 +256,19 @@
   --discBrand: #b68cf2;
   --discProduct: #f1f1f4;
   --discInteractive: #b5b4bb;
-  --shadow: none;
-  --shadowRaised: 4px 4px 0 0 #B68CF2;
-}
-.a-display {
-  font-family: var(--font-text);
-  font-size: 96px;
-  line-height: 88px;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  font-stretch: 112%;
-}
-.a-display-t {
-  font-family: var(--font-text);
-  font-size: 72px;
-  line-height: 68px;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  font-stretch: 110%;
-}
-.a-display-m {
-  font-family: var(--font-text);
-  font-size: 48px;
-  line-height: 48px;
-  font-weight: 800;
-  letter-spacing: -0.035em;
-  font-stretch: 108%;
-}
-.a-display-xs {
-  font-family: var(--font-text);
-  font-size: 42px;
-  line-height: 42px;
-  font-weight: 800;
-  letter-spacing: -0.035em;
-  font-stretch: 108%;
-}
-.a-title {
-  font-family: var(--font-text);
-  font-size: 44px;
-  line-height: 48px;
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  font-stretch: 105%;
-}
-.a-subtitle {
-  font-family: var(--font-text);
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  font-stretch: 100%;
-}
-.a-body {
-  font-family: var(--font-text);
-  font-size: 18px;
-  line-height: 28px;
-  font-weight: 400;
-  letter-spacing: 0;
-  font-stretch: 100%;
-}
-.a-small {
-  font-family: var(--font-text);
-  font-size: 15px;
-  line-height: 22px;
-  font-weight: 400;
-  letter-spacing: 0;
-  font-stretch: 100%;
 }
 .a-label {
   font-family: var(--font-mono);
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 0.75rem;
+  line-height: 1rem;
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 .a-button {
   font-family: var(--font-text);
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
   font-weight: 600;
   letter-spacing: 0.005em;
   font-stretch: 105%;

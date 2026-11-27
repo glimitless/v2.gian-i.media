@@ -46,7 +46,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <div className="relative isolate mx-auto flex w-full max-w-max flex-1 flex-col px-(--margin-mobile) sm:px-(--margin-tablet) lg:px-(--margin-desktop)">
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute inset-x-0 -z-10 top-0 bottom-0 mx-auto hidden max-w-max px-(margin-mobile) sm:block sm:px-(--margin-tablet) lg:px-(--margin-desktop)"
+              className="pointer-events-none absolute inset-x-0 -z-10 top-0 bottom-0 mx-auto hidden max-w-max px-(--margin-mobile) sm:block sm:px-(--margin-tablet) lg:px-(--margin-desktop)"
             >
               <div
                 className="grid h-full grid-cols-12 lg:gap-x-6"

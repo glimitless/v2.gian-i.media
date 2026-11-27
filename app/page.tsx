@@ -66,7 +66,7 @@ export default function HomePage() {
         <p className="a-label text-lmAccentInk lg:col-span-3 dark:text-dmAccentInk">FIG. 00 — INTRO</p>
         <div className="flex flex-col gap-8 lg:col-span-9 lg:col-start-4 lg:row-span-2 lg:row-start-1">
           <h1 id="intro" className={DISPLAY_HEADING}>
-            I design the brand and the interface, and increasingly the <span className="text-lmAccentInk dark:text-dmAccentInk">code</span> behind&nbsp;them.
+            I design the brand, the interface, and increasingly the <span className="text-lmAccentInk dark:text-dmAccentInk">code</span> behind&nbsp;them.
           </h1>
           <p className="font-text text-subtitle font-medium text-lmSecondary max-w-160 dark:text-dmSecondary">
             I’m a graphic designer transitioning into product design engineering, trained at OCAD University and drawn to work at the frontier of science and technology.

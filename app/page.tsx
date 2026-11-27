@@ -207,7 +207,7 @@ export default function HomePage() {
                   className="flex flex-row justify-center items-center h-full w-full"
                   href={`/archive/${item.type}s/${item.id}`}
                 >
-                  <Thumbnail focusable="false" className="size-[84%] text-lmSecondary group-hover:text-lmAccentInk dark:text-dmSecondary transition-colors duration-(--duration-hover)" />
+                  <Thumbnail focusable="false" className="size-[84%] text-lmSecondary group-hover:text-lmAccentInk dark:group-hover:text-dmAccentInk dark:text-dmSecondary transition-colors duration-(--duration-hover)" />
                 </Link>
               </li>
             );

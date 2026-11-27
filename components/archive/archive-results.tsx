@@ -100,7 +100,7 @@ const ArchiveRow = memo(function ArchiveRow({
 
       <Link
         href={`/archive/${item.type}/${item.id}`}
-        className="col-start-2 row-start-1 font-text text-base leading-[1.3125rem] font-semibold font-stretch-105% tracking-[-0.01em] text-lmPrimary after:absolute after:inset-0 after:content-[''] group-hover:text-lmAccentInk focus-visible:outline-none sm:col-start-3 sm:text-[1.25rem] sm:leading-[1.625rem] lg:text-[1.375rem] lg:leading-7 dark:text-dmPrimary dark:group-hover:text-dmAccentInk"
+        className="col-start-2 row-start-1 font-text text-base leading-5.25 font-semibold font-stretch-105% tracking-[-0.01em] text-lmPrimary after:absolute after:inset-0 after:content-[''] group-hover:text-lmAccentInk focus-visible:outline-none sm:col-start-3 sm:text-[1.25rem] sm:leading-6.5 lg:text-[1.375rem] lg:leading-7 dark:text-dmPrimary dark:group-hover:text-dmAccentInk"
       >
         {item.title}
       </Link>

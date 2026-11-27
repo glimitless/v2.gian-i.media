@@ -50,7 +50,32 @@ const FEATURED = [
 ];
 
 // Single-ink SVG thumbnails for the archive promo, in the frame's order.
-const PROMO_IDS = ['time-unwinding-the-spiral', 'sensing-change', 'axxs-digital', 'design-photography', 'seventh-sense', 'visualizing-science'];
+const PROMO_IDS = [
+  {
+    id: 'seventh-sense',
+    type: 'work' 
+  },
+  {
+    id: 'beehive-design',
+    type: 'work' 
+  },
+  {
+    id: 'scarborough-charter',
+    type: 'work' 
+  },
+  {
+    id: 'visualizing-science',
+    type: 'work' 
+  },
+  {
+    id: 'does-this-work',
+    type: 'work' 
+  },
+  {
+    id: 'enginuitty-group-ltd',
+    type: 'work' 
+  }  
+];
 
 const plural = (count: number, word: string) => `${count} ${word}${count === 1 ? '' : 's'}`;
 
@@ -172,13 +197,19 @@ export default function HomePage() {
           </Link>
         </div>
         <ul className="grid grid-cols-3 gap-3 sm:grid-cols-6 lg:col-span-7" aria-hidden="true">
-          {PROMO_IDS.map((id) => {
-            const record = recordById.get(id);
+          {PROMO_IDS.map((item) => {
+            const record = recordById.get(item.id);
             if (!record) return null;
             const Thumbnail = record.thumbnail;
             return (
-              <li key={id} className="grid aspect-square place-items-center bg-lmSurface dark:bg-dmSurface">
-                <Thumbnail focusable="false" className="size-[84%] text-lmSecondary dark:text-dmSecondary" />
+              <li key={item.id} className="group grid aspect-square place-items-center bg-lmSurface dark:bg-dmSurface p-0">
+                <Link
+                  className="flex flex-row justify-center items-center h-full w-full"
+                  href={`/archive/${item.type}s/${item.id}`}
+                >
+                  <Thumbnail focusable="false" className="size-[84%] text-lmSecondary group-hover:text-lmAccentInk dark:text-dmSecondary transition-colors duration-(--duration-hover)" />
+                </Link>
+                
               </li>
             );
           })}

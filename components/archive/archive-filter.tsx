@@ -139,7 +139,7 @@ export default function ArchiveFilter() {
             onChange={(event) => onToggleTitleSearch(event.target.value)}
             placeholder="SEARCH TITLES"
             aria-label="Search titles"
-            className="min-h-11 w-full min-w-0 border border-lmFadedText bg-transparent px-3 font-mono text-[0.75rem] tracking-[0.06em] text-lmPrimary placeholder:text-lmFadedText sm:min-h-9 sm:w-[360px] dark:border-dmFadedText dark:text-dmPrimary dark:placeholder:text-dmFadedText"
+            className="min-h-11 w-full min-w-0 border border-lmFadedText bg-transparent px-3 font-mono text-[0.75rem] tracking-[0.06em] text-lmPrimary placeholder:text-lmFadedText sm:min-h-9 sm:w-90 dark:border-dmFadedText dark:text-dmPrimary dark:placeholder:text-dmFadedText"
           />
           {resetButton('hidden min-h-9 sm:flex')}
           <div className="hidden flex-wrap gap-2 sm:flex">

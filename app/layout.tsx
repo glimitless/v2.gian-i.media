@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   alternates: { canonical: './' }
 };
 
-// Sets the color scheme prior to painting HTML
+// Sets the color scheme prior to painting HTMLd
 const themeScript = `(
   function(){
     try {

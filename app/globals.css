@@ -264,49 +264,8 @@
   --shadow: none;
   --shadowRaised: 4px 4px 0 0 #B68CF2;
 }
-:root {
-  --container-max: 1440px; /* Maximum page width, including the side margins (48px each from 1024, so content is at most 1344px). Above it the page, its rules and the 12-column grid are centred; columns stay 90px, collection media stays 660px, captions stay max-width 56ch. */
-  --margin-mobile: 16px; /* Page side margin below 640px (1 column). */
-  --margin-tablet: 32px; /* Page side margin 640–1023px (12 columns, 24px gutter). */
-  --margin-desktop: 48px; /* Page side margin from 1024px (12 columns, 24px gutter). */
-  --bp-xs: 360px; /* Type-only switch: a-display-xs below, a-display-m from here. */
-  --bp-sm: 640px; /* Tablet band: 32px margins, 12 columns, a-display-t. */
-  --bp-lg: 1024px; /* The 1440 layout returns: 48px margins, a-display. */
-  --bp-xl: 1280px; /* Wide band: 1280 archive-row widths, 3-column collection. */
-  --bp-2xl: 1440px; /* Container cap (container-max): the page centres above this. */
-  --a-radius: 0px; /* Everything: buttons, chips, cards, images, inputs. No exceptions. */
-  --a-dur-press: 90ms; /* Press: element translates 2px,2px and the offset shadow collapses to 0. Replaces the old 0.96 scale. Easing: a-ease-snap. */
-  --a-dur-hover: 160ms; /* Colour, background and underline changes on links, buttons, chips and archive rows. Easing: a-ease-snap. */
-  --a-dur-settle: 280ms; /* Archive filter results re-flowing; nav underline sliding between items. Easing: a-ease-out. */
-  --a-dur-dim: 480ms; /* Thumbnail dim and un-dim on row hover; theme cross-fade. Easing: a-ease-out. */
-  --a-stagger: 30ms; /* Offset between labels, and between accent marks, in a page-load or scroll-in reveal. Label starts are capped at 150ms, so a long run compresses below 30ms. Easing follows the element: steps(n) for typing, a-ease-snap for marks. */
-  --a-ease-snap: cubic-bezier(0.2, 0, 0, 1); /* Easing. */
-  --a-ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* Easing. */
-  --font-archivo: "Archivo", "Helvetica Neue", Arial, sans-serif;
-  --font-ibmplexmono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
-  --text-a-display: 800 96px/88px var(--font-archivo); /* Desktop display (1024px and up). font-stretch 112%. Home hero line, archive page titles. */
-  --text-a-display-t: 800 72px/68px var(--font-archivo); /* Tablet display (640–1023px). font-stretch 110%. */
-  --text-a-display-m: 800 48px/48px var(--font-archivo); /* Mobile display (360–639px). font-stretch 108%. */
-  --text-a-display-xs: 800 42px/42px var(--font-archivo); /* Narrow mobile display (below 360px). font-stretch 108%. */
-  --text-a-title: 700 44px/48px var(--font-archivo); /* Project titles, section heads. font-stretch 105%. */
-  --text-a-subtitle: 500 24px/32px var(--font-archivo); /* Project intros, discipline names. */
-  --text-a-body: 400 18px/28px var(--font-archivo); /* Running text, case-study copy. */
-  --text-a-small: 400 15px/22px var(--font-archivo); /* Captions, card descriptions, footer. */
-  --text-a-label: 500 12px/16px var(--font-ibmplexmono); /* UPPERCASE. Metadata, dates, tags, figure numbers, filter chips. */
-  --text-a-button: 600 15px/20px var(--font-archivo); /* Buttons. font-stretch 105%. */
-}
-/* Breakpoint custom properties are reference values: CSS can't read var() inside @media, so write the px values (or use the Tailwind screens). */
-@media (prefers-reduced-motion: reduce) {
-  :root {
-    --a-dur-press: 0ms;
-    --a-dur-hover: 0ms;
-    --a-dur-settle: 0ms;
-    --a-dur-dim: 0ms;
-    --a-stagger: 0ms;
-  }
-}
 .a-display {
-  font-family: var(--font-archivo);
+  font-family: var(--font-text);
   font-size: 96px;
   line-height: 88px;
   font-weight: 800;
@@ -314,7 +273,7 @@
   font-stretch: 112%;
 }
 .a-display-t {
-  font-family: var(--font-archivo);
+  font-family: var(--font-text);
   font-size: 72px;
   line-height: 68px;
   font-weight: 800;
@@ -322,7 +281,7 @@
   font-stretch: 110%;
 }
 .a-display-m {
-  font-family: var(--font-archivo);
+  font-family: var(--font-text);
   font-size: 48px;
   line-height: 48px;
   font-weight: 800;
@@ -330,7 +289,7 @@
   font-stretch: 108%;
 }
 .a-display-xs {
-  font-family: var(--font-archivo);
+  font-family: var(--font-text);
   font-size: 42px;
   line-height: 42px;
   font-weight: 800;
@@ -338,7 +297,7 @@
   font-stretch: 108%;
 }
 .a-title {
-  font-family: var(--font-archivo);
+  font-family: var(--font-text);
   font-size: 44px;
   line-height: 48px;
   font-weight: 700;
@@ -346,7 +305,7 @@
   font-stretch: 105%;
 }
 .a-subtitle {
-  font-family: var(--font-archivo);
+  font-family: var(--font-text);
   font-size: 24px;
   line-height: 32px;
   font-weight: 500;
@@ -354,7 +313,7 @@
   font-stretch: 100%;
 }
 .a-body {
-  font-family: var(--font-archivo);
+  font-family: var(--font-text);
   font-size: 18px;
   line-height: 28px;
   font-weight: 400;
@@ -362,7 +321,7 @@
   font-stretch: 100%;
 }
 .a-small {
-  font-family: var(--font-archivo);
+  font-family: var(--font-text);
   font-size: 15px;
   line-height: 22px;
   font-weight: 400;
@@ -370,7 +329,7 @@
   font-stretch: 100%;
 }
 .a-label {
-  font-family: var(--font-ibmplexmono);
+  font-family: var(--font-mono);
   font-size: 12px;
   line-height: 16px;
   font-weight: 500;
@@ -378,7 +337,7 @@
   text-transform: uppercase;
 }
 .a-button {
-  font-family: var(--font-archivo);
+  font-family: var(--font-text);
   font-size: 15px;
   line-height: 20px;
   font-weight: 600;

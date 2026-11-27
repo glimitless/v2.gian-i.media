@@ -81,7 +81,7 @@ function renderContentBlock(block: ContentBlockArgs, key: number): ReactNode {
   if (block.type === 'quote') {
     return (
       <blockquote key={key} className="flex flex-col border-t border-lmMedium dark:border-dmMedium py-6 [--mark-ink:0.84375rem] sm:grid sm:grid-cols-[var(--mark-ink)_1fr] sm:gap-x-6">
-        <span aria-hidden="true" className="font-text text-[3rem] sm:col-start-1 leading-none text-lmAccentInk dark:text-dmAccentInk">“</span>
+        <span aria-hidden="true" className="font-text text-[3rem] sm:col-start-1 sm:h-0 leading-none text-lmAccentInk dark:text-dmAccentInk">“</span>
         {block.content.map((qBlock, i) => renderContentBlock(qBlock, i))}
       </blockquote>
     );
